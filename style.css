@@ -32,11 +32,11 @@ body{
     }
 }
 
-.user-result{
+.user-result img{
     transform: rotate(90deg);
 }
 
-.computer-result{
+.computer-result img{
     transform: rotate(-90deg) rotateY(180deg);
 }
 
@@ -46,6 +46,25 @@ body{
     font-weight: bold;
     margin: 1.5rem 0;
     font-size: 2rem;
+}
+.container.start .user-result{
+    transform-origin: left;
+    animation: userShakes 0.7s ease infinite;
+}
+@keyframes userShakes {
+    50%{
+        transform: rotate(10deg);
+    }
+}
+
+.container.start .computer-result{
+    transform-origin: right;
+    animation: computerShakes 0.7s ease infinite;
+}
+@keyframes computerShakes {
+    50%{
+        transform: rotate(-10deg);
+    }
 }
 
 .options{
